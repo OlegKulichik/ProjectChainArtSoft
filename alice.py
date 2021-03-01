@@ -1,10 +1,10 @@
-import time
+import time,sys
 
 
 t = time.time()
 
 def decoder():
-    with open("somefile.txt", "r") as file:
+    with open(sys.argv[-1], "r") as file:
         for text in file:
             if len(set(text)) == len(text):
                 return text
